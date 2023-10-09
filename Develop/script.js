@@ -14,8 +14,12 @@ if (passwordLength < 8 || passwordLength > 128) {
   alert("Please enter a valid number");
   return;
 }
-// make a prompt that confirms option of sp ch, num, lc, or uc
-var option = prompt("Include lowercase, uppercase, numeric, and/or special characters?")
+// make a confirmation of option of lowercase
+var option1 = confirm("Include lowercase?")
+if (option1 = true) {
+console.log (option1)
+}
+//
 
 }
 
