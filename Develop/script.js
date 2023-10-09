@@ -4,7 +4,7 @@ var specialCharacters = ["!", "#", "$", "%", "&", "'","(",")","*"];
 var numbers = [0,1,2,3,4,5,6,7,8,9];
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k","l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K","L", "M","N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
+var userPassword;
 // make a function for generatePassword
 function generatePassword() {
 // make a prompt that asks user to enter 8 - 128 characters
@@ -16,15 +16,26 @@ if (passwordLength < 8 || passwordLength > 128) {
 }
 // make a confirmation of option of lowercase
 var option1 = confirm("Include lowercase?")
-if (option1 = true) {
-console.log (option1)
+if (option1 === true)
+{
+generatedPassword = generatedPassword + lowercase;
 }
-//
-
+var option2 = confirm("Include uppercase?")
+if (option2 === true) {
+generatedPassword = generatedPassword + lowercase + uppercase;
+}
+var option3 = confirm("Include numbers?")
+if (option3 === true) {
+generatedPassword = generatedPassword + lowercase + uppercase + numbers;
+}
+var option4 = confirm("Include special characters?")
+if (option4 === true) {
+generatedPassword = generatedPassword + lowercase + uppercase + numbers + specialCharacters;
+}
 }
 
 // make an empty array that holds info of what user wants
-var password = [];
+var generatedPassword = [];
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
