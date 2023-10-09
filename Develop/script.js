@@ -12,12 +12,11 @@ var passwordLength = prompt("Enter a number between 8 to 128")
 // make a conditional statement for password length
 if (passwordLength < 8 || passwordLength > 128) {
   alert("Please enter a valid number");
+  return;
 }
 // make a prompt that confirms option of sp ch, num, lc, or uc
 var option = prompt("Include lowercase, uppercase, numeric, and/or special characters?")
-if (option = "yes") {
 
-}
 }
 
 // make an empty array that holds info of what user wants
