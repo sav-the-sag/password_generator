@@ -15,11 +15,13 @@ if (passwordLength < 8 || passwordLength > 128) {
 }
 // make a prompt that confirms option of sp ch, num, lc, or uc
 var option = prompt("Include lowercase, uppercase, numeric, and/or special characters?")
+if (option = "yes") {
+
+}
 }
 
-
 // make an empty array that holds info of what user wants
-
+var password = [];
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
