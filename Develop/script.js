@@ -18,24 +18,37 @@ if (passwordLength < 8 || passwordLength > 128) {
 var option1 = confirm("Include lowercase?")
 if (option1 === true)
 {
-generatedPassword = generatedPassword + lowercase;
+
 }
+// make a confirmation of option of uppercase
 var option2 = confirm("Include uppercase?")
 if (option2 === true) {
-generatedPassword = generatedPassword + lowercase + uppercase;
+
 }
+// make a confirmation of option of numbers
 var option3 = confirm("Include numbers?")
 if (option3 === true) {
-generatedPassword = generatedPassword + lowercase + uppercase + numbers;
+
 }
+//make a confirmation of option of special characters
 var option4 = confirm("Include special characters?")
 if (option4 === true) {
-generatedPassword = generatedPassword + lowercase + uppercase + numbers + specialCharacters;
-}
-}
 
+}
 // make an empty array that holds info of what user wants
-var generatedPassword = [];
+var generatedPassword = '';
+    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+        'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+ // add for loop with math floor and math random to repeat code
+    for (var i = 1; i <= passwordLength; i++) {
+        var char = Math.floor(Math.random()
+            * str.length + 1);
+ 
+        generatedPassword += str.charAt(char)
+    }
+ 
+    return generatedPassword;
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
